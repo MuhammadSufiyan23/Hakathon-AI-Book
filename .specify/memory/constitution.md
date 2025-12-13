@@ -1,55 +1,73 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report -->
+<!-- Version change: None (Initial Creation) -->
+<!-- Modified principles: None -->
+<!-- Added sections: Core Principles, Key Standards and Constraints, Development and Quality Gates, Governance -->
+<!-- Removed sections: None -->
+<!-- Templates requiring updates:
+✅ .specify/templates/plan-template.md
+✅ .specify/templates/spec-template.md
+✅ .specify/templates/tasks-template.md
+✅ .claude/commands/sp.adr.md
+✅ .claude/commands/sp.analyze.md
+✅ .claude/commands/sp.checklist.md
+✅ .claude/commands/sp.clarify.md
+✅ .claude/commands/sp.constitution.md
+✅ .claude/commands/sp.git.commit_pr.md
+✅ .claude/commands/sp.implement.md
+✅ .claude/commands/sp.phr.md
+✅ .claude/commands/sp.plan.md
+✅ .claude/commands/sp.specify.md
+✅ .claude/commands/sp.tasks.md
+-->
+<!-- Follow-up TODOs: None -->
+# AI-native technical textbook on Physical AI & Humanoid Robotics Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Technical Accuracy
+All technical content MUST be based on official robotics documentation, prioritizing primary sources for factual correctness.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clarity for Engineering Students
+Content MUST be clear, concise, and accessible to engineering students with computer science and robotics backgrounds, avoiding unnecessary jargon.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Reproducibility
+All code examples and setup instructions MUST be fully testable and reproducible, with clear steps for verification.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Docusaurus Consistency
+Documentation MUST adhere to Docusaurus standards and best practices, following Context7 documentation guidelines for consistent formatting and structure.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Key Standards and Constraints
 
-### [PRINCIPLE_6_NAME]
+All technical content MUST map to primary robotics sources.
+Reference Priority:
+1. ROS2 documentation
+2. Gazebo documentation
+3. NVIDIA Isaac documentation
+4. Docusaurus documentation via Context7
 
+Allowed Code Types:
+- Python (ROS2 rclpy)
+- URDF
+- .launch XML files
 
-[PRINCIPLE__DESCRIPTION]
+Frontend: Markdown documentation under `/docs/`
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Project Constraints:
+- Total: 15 chapters
+- Code Examples: 3+ per chapter
+- Lab Exercises: One per chapter
+- Rendering: Book MUST be rendered as a Docusaurus docs site following Context7 guidelines.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development and Quality Gates
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Success Criteria:
+- All chapters MUST render correctly with sidebar navigation.
+- The Docusaurus build process MUST compile without errors.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- Constitution supersedes all other project practices and documentation.
+- Amendments to this constitution REQUIRE documentation, approval by project maintainers, and a clear migration plan for affected components.
+- All code contributions and reviews MUST verify compliance with the principles and standards outlined herein.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
