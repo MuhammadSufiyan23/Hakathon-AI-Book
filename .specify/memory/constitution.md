@@ -1,8 +1,8 @@
 <!-- Sync Impact Report -->
-<!-- Version change: None (Initial Creation) -->
-<!-- Modified principles: None -->
-<!-- Added sections: Core Principles, Key Standards and Constraints, Development and Quality Gates, Governance -->
-<!-- Removed sections: None -->
+<!-- Version change: 1.0.0 -> 1.1.0 -->
+<!-- Modified principles: Changed from Physical AI & Humanoid Robotics to RAG Chatbot Development -->
+<!-- Added sections: RAG-specific principles, Cohere API usage, Vector database constraints -->
+<!-- Removed sections: Previous robotics-specific principles -->
 <!-- Templates requiring updates:
 ✅ .specify/templates/plan-template.md
 ✅ .specify/templates/spec-template.md
@@ -20,54 +20,72 @@
 ✅ .claude/commands/sp.tasks.md
 -->
 <!-- Follow-up TODOs: None -->
-# AI-native technical textbook on Physical AI & Humanoid Robotics Constitution
+
+# Integrated RAG Chatbot Development Constitution
 
 ## Core Principles
 
-### I. Technical Accuracy
-All technical content MUST be based on official robotics documentation, prioritizing primary sources for factual correctness.
+### I. Accuracy in Retrieval and Generation
+All responses MUST be grounded in retrieved book content or selected text to minimize hallucinations, using vector-based search and Cohere-powered augmentation for factual correctness.
 
-### II. Clarity for Engineering Students
-Content MUST be clear, concise, and accessible to engineering students with computer science and robotics backgrounds, avoiding unnecessary jargon.
+### II. Usability for End-Users
+The chatbot interface MUST be intuitive with fast response times under 2 seconds, providing a seamless experience for users querying book content.
 
-### III. Reproducibility
-All code examples and setup instructions MUST be fully testable and reproducible, with clear steps for verification.
+### III. Modularity
+Components like retrieval, database, and API MUST be loosely coupled for easy maintenance, allowing independent updates and testing of individual system parts.
 
-### IV. Docusaurus Consistency
-Documentation MUST adhere to Docusaurus standards and best practices, following Context7 documentation guidelines for consistent formatting and structure.
+### IV. Security
+API keys MUST be encrypted, data privacy MUST be maintained with no user data logging, and all sensitive information MUST be handled securely in compliance with privacy regulations.
+
+### V. Excellence in Implementation
+Code MUST follow PEP 8 standards for Python, with optimized performance and multilingual support via Cohere/Qwen, ensuring clean, maintainable implementation.
 
 ## Key Standards and Constraints
 
-All technical content MUST map to primary robotics sources.
-Reference Priority:
-1. ROS2 documentation
-2. Gazebo documentation
-3. NVIDIA Isaac documentation
-4. Docusaurus documentation via Context7
+All responses must be grounded in retrieved book content or selected text to minimize hallucinations.
 
-Allowed Code Types:
-- Python (ROS2 rclpy)
-- URDF
-- .launch XML files
+Code Quality Standards:
+- Python code MUST follow PEP 8 standards
+- Test coverage MUST be 80%+ using pytest
+- Integration testing MUST include end-to-end tests for RAG pipeline using mock data
+- Documentation MUST be comprehensive with README and inline comments, generated via SpecifyKit Plus schemas
+- Performance metrics MUST achieve retrieval recall > 90%, with generation coherence scored via human eval or automated metrics
 
-Frontend: Markdown documentation under `/docs/`
+Technology Stack Constraints:
+- Cohere API MUST be used for embeddings and generation (no OpenAI allowed)
+- Qwen CLI MUST be used for prototyping
+- SpecifyKit Plus MUST be used for project specs and workflows
+- FastAPI MUST be used for API development
+- Neon Serverless Postgres MUST be used for database
+- Qdrant Cloud Free Tier MUST be used for vector storage
 
-Project Constraints:
-- Total: 15 chapters
-- Code Examples: 3+ per chapter
-- Lab Exercises: One per chapter
-- Rendering: Book MUST be rendered as a Docusaurus docs site following Context7 guidelines.
+Resource Constraints:
+- Qdrant Free Tier (1GB maximum storage)
+- Embeddings MUST be optimized to < 512 dimensions
+- Deployment MUST be containerized with Docker
+- Deployment MUST be compatible with free tiers (e.g., Render or Vercel for FastAPI)
+
+Allowed Components:
+- Backend: FastAPI with Cohere integration
+- Database: Neon Serverless Postgres
+- Vector Database: Qdrant Cloud Free Tier
+- Containerization: Docker
+- Orchestration: SpecifyKit Plus for specs/workflows
 
 ## Development and Quality Gates
 
 Success Criteria:
-- All chapters MUST render correctly with sidebar navigation.
-- The Docusaurus build process MUST compile without errors.
+- Chatbot MUST accurately answer 95%+ of test queries on book content
+- System MUST support selected-text mode without leaking external context
+- Chatbot MUST be fully embedded and functional in a sample book viewer (e.g., web/PDF)
+- Zero critical bugs MUST be present in production tests
+- Code MUST pass review for modularity and security
 
 ## Governance
 
 - Constitution supersedes all other project practices and documentation.
 - Amendments to this constitution REQUIRE documentation, approval by project maintainers, and a clear migration plan for affected components.
 - All code contributions and reviews MUST verify compliance with the principles and standards outlined herein.
+- Versioning follows semantic versioning: MAJOR for backward incompatible changes, MINOR for new principles/features, PATCH for clarifications.
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
+**Version**: 1.1.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-19

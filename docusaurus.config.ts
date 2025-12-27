@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Humanoid Robotics & Physical AI',
   tagline: 'A comprehensive textbook on Physical AI and Humanoid Robotics',
-  favicon: 'img/1new.png',
+  favicon: 'img/headerlogo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -78,7 +78,7 @@ const config: Config = {
       title: 'Humanoid Robotics & Physical AI',
       logo: {
         alt: 'Humanoid Robotics Book Logo',
-        src: 'img/1new.png',
+        src: 'img/headerlogo.png',
       },
       items: [
         {
@@ -107,6 +107,10 @@ const config: Config = {
             {
               label: 'Physical AI',
               to: '/docs/physical-ai/introduction',
+            },
+            {
+              label: 'Weekly',
+              to: '/docs/weekly/week-01-physical-ai/foundations',
             },
           ],
         },
@@ -150,5 +154,134 @@ export default config;
 
 
 
+// import type {Config} from '@docusaurus/types';
+// import type * as Preset from '@docusaurus/preset-classic';
+// import {themes as prismThemes} from 'prism-react-renderer';
 
+// const config: Config = {
+//   title: 'Humanoid Robotics & Physical AI',
+//   tagline: 'A comprehensive textbook on Physical AI and Humanoid Robotics',
+//   favicon: 'img/headerlogo.png',
 
+//   url: 'https://physical-ai-humanoid-course-textbook.vercel.app', // tumhara actual Vercel URL daal do
+//   baseUrl: '/',
+
+//   organizationName: 'MuhammadSufiyan23', // tumhara GitHub username daal do
+//   projectName: 'Hakathon-Physical-AI-Humanoid-TextBook', // tumhara repo name
+
+//   onBrokenLinks: 'warn', // throw se warn kar diya taaki build na ruke
+//   onBrokenMarkdownLinks: 'warn',
+
+//   i18n: {
+//     defaultLocale: 'en',
+//     locales: ['en'],
+//   },
+
+//   presets: [
+//     [
+//       'classic',
+//       {
+//         docs: {
+//           sidebarPath: './sidebars.ts',
+//           routeBasePath: '/docs',
+//           editUrl: 'https://github.com/MuhammadSufiyan23/Hakathon-Physical-AI-Humanoid-TextBook/edit/main/',
+//         },
+//         blog: false,
+//         theme: {
+//           customCss: './src/css/custom.css',
+//         },
+//       } satisfies Preset.Options,
+//     ],
+//   ],
+
+//   themeConfig: {
+//     image: 'img/docusaurus-social-card.jpg',
+//     colorMode: {
+//       defaultMode: 'dark',
+//       disableSwitch: false,
+//       respectPrefersColorScheme: true,
+//     },
+//     navbar: {
+//       title: 'Humanoid Robotics & Physical AI',
+//       logo: {
+//         alt: 'Book Logo',
+//         src: 'img/headerlogo.png',
+//       },
+//       items: [
+//         {
+//           type: 'docSidebar',
+//           sidebarId: 'tutorialSidebar',
+//           position: 'left',
+//           label: 'Book Chapters',
+//         },
+//         {
+//           to: '/docs/physical-ai/introduction',
+//           label: 'Start Reading',
+//           position: 'left',
+//         },
+//         {
+//           href: 'https://github.com/MuhammadSufiyan23/Hakathon-Physical-AI-Humanoid-TextBook',
+//           label: 'GitHub',
+//           position: 'right',
+//         },
+//       ],
+//     },
+//     footer: {
+//       style: 'dark',
+//       links: [
+//         {
+//           title: 'Book Content',
+//           items: [
+//             {
+//               label: 'Introduction',
+//               to: '/docs/physical-ai/introduction',
+//             },
+//             {
+//               label: 'Week 1: Physical AI Foundations',
+//               to: '/docs/weekly/week-01-physical-ai/foundations',
+//             },
+//           ],
+//         },
+//         {
+//           title: 'Resources',
+//           items: [
+//             {
+//               label: 'ROS 2 Documentation',
+//               href: 'https://docs.ros.org/',
+//             },
+//             {
+//               label: 'Gazebo Simulation',
+//               href: 'https://gazebosim.org/',
+//             },
+//             {
+//               label: 'NVIDIA Isaac',
+//               href: 'https://developer.nvidia.com/isaac',
+//             },
+//           ],
+//         },
+//         {
+//           title: 'Community',
+//           items: [
+//             {
+//               label: 'GitHub',
+//               href: 'https://github.com/MuhammadSufiyan23/Hakathon-Physical-AI-Humanoid-TextBook',
+//             },
+//           ],
+//         },
+//       ],
+//       copyright: `Copyright © ${new Date().getFullYear()} Muhammad Sufiyan. Built with Docusaurus.`,
+//     },
+//     prism: {
+//       theme: prismThemes.github,
+//       darkTheme: prismThemes.dracula,
+//     },
+//     docs: {
+//       sidebar: {
+//         hideable: true,
+//         autoCollapseCategories: false,
+//       },
+//     },
+//   } satisfies Preset.ThemeConfig,
+// };
+
+// export default config;

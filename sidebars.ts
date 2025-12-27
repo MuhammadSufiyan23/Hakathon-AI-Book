@@ -183,3 +183,193 @@ const sidebars: SidebarsConfig = {
 };
 
 export default sidebars;
+
+
+
+
+// import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+
+// const sidebars: SidebarsConfig = {
+//   tutorialSidebar: [
+//     {
+//       type: 'category',
+//       label: 'Introduction',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'physical-ai/introduction' }, // ← Yeh add kiya
+//       items: [
+//         'physical-ai/introduction',
+//         'physical-ai/glossary',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 1: Physical AI Foundations',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-01-physical-ai/foundations' }, // ← Yeh add
+//       items: [
+//         'weekly/week-01-physical-ai/foundations',
+//         'weekly/week-01-physical-ai/digital-ai-physical-laws',
+//         'weekly/week-01-physical-ai/humanoid-robotics-landscape',
+//         'weekly/week-01-physical-ai/sensor-systems',
+//         'weekly/week-01-physical-ai/quiz',
+//         'weekly/week-01-physical-ai/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 2: Embodied Intelligence',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-02-physical-ai/embodied-intelligence' },
+//       items: [
+//         'weekly/week-02-physical-ai/embodied-intelligence',
+//         'weekly/week-02-physical-ai/overview-applications',
+//         'weekly/week-02-physical-ai/quiz',
+//         'weekly/week-02-physical-ai/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 3: ROS 2 Fundamentals - Core Concepts',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-03-ros2/introduction' },
+//       items: [
+//         'weekly/week-03-ros2/introduction',
+//         'weekly/week-03-ros2/nodes-topics-services',
+//         'weekly/week-03-ros2/packages-workspaces',
+//         'weekly/week-03-ros2/quiz',
+//         'weekly/week-03-ros2/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 4: ROS 2 Fundamentals - Development',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-04-ros2/client-libraries' },
+//       items: [
+//         'weekly/week-04-ros2/client-libraries',
+//         'weekly/week-04-ros2/launch-files',
+//         'weekly/week-04-ros2/testing-debugging',
+//         'weekly/week-04-ros2/quiz',
+//         'weekly/week-04-ros2/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 5: ROS 2 Fundamentals - Advanced Topics',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-05-ros2/ros2-packages' },
+//       items: [
+//         'weekly/week-05-ros2/ros2-packages',
+//         'weekly/week-05-ros2/rosbags-actions',
+//         'weekly/week-05-ros2/middleware-transport',
+//         'weekly/week-05-ros2/quiz',
+//         'weekly/week-05-ros2/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 6: Robot Simulation with Gazebo',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-06-gazebo/introduction' },
+//       items: [
+//         'weekly/week-06-gazebo/introduction',
+//         'weekly/week-06-gazebo/world-modeling',
+//         'weekly/week-06-gazebo/robot-modeling',
+//         'weekly/week-06-gazebo/sensors-plugins',
+//         'weekly/week-06-gazebo/quiz',
+//         'weekly/week-06-gazebo/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 7: Robot Simulation - Advanced Modeling',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-07-gazebo/physics-engines' },
+//       items: [
+//         'weekly/week-07-gazebo/physics-engines',
+//         'weekly/week-07-gazebo/simulation-environments',
+//         'weekly/week-07-gazebo/integration-ros2',
+//         'weekly/week-07-gazebo/quiz',
+//         'weekly/week-07-gazebo/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 8: NVIDIA Isaac Platform - Introduction',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-08-isaac/introduction' },
+//       items: [
+//         'weekly/week-08-isaac/introduction',
+//         'weekly/week-08-isaac/isaac-sdk',
+//         'weekly/week-08-isaac/carter-robot',
+//         'weekly/week-08-isaac/quiz',
+//         'weekly/week-08-isaac/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 9: NVIDIA Isaac Platform - AI Capabilities',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-09-isaac/perception-pipelines' },
+//       items: [
+//         'weekly/week-09-isaac/perception-pipelines',
+//         'weekly/week-09-isaac/ai-models',
+//         'weekly/week-09-isaac/computer-vision',
+//         'weekly/week-09-isaac/quiz',
+//         'weekly/week-09-isaac/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 10: NVIDIA Isaac Platform - Advanced AI',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-10-isaac/navigation' },
+//       items: [
+//         'weekly/week-10-isaac/navigation',
+//         'weekly/week-10-isaac/manipulation',
+//         'weekly/week-10-isaac/simulation-workflows',
+//         'weekly/week-10-isaac/quiz',
+//         'weekly/week-10-isaac/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 11: Humanoid Robot Development - Kinematics',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-11-humanoid/introduction' },
+//       items: [
+//         'weekly/week-11-humanoid/introduction',
+//         'weekly/week-11-humanoid/kinematics',
+//         'weekly/week-11-humanoid/dynamics',
+//         'weekly/week-11-humanoid/quiz',
+//         'weekly/week-11-humanoid/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 12: Humanoid Robot Development - Interaction',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-12-humanoid/bipedal-locomotion' },
+//       items: [
+//         'weekly/week-12-humanoid/bipedal-locomotion',
+//         'weekly/week-12-humanoid/human-robot-interaction',
+//         'weekly/week-12-humanoid/control-systems',
+//         'weekly/week-12-humanoid/quiz',
+//         'weekly/week-12-humanoid/lab-exercise',
+//       ],
+//     },
+//     {
+//       type: 'category',
+//       label: 'Week 13: Conversational Robotics',
+//       collapsed: false,
+//       link: { type: 'doc', id: 'weekly/week-13-conversational/introduction' },
+//       items: [
+//         'weekly/week-13-conversational/introduction',
+//         'weekly/week-13-conversational/natural-language-processing',
+//         'weekly/week-13-conversational/dialogue-systems',
+//       ],
+//     },
+//   ],
+// };
+
+// export default sidebars;
